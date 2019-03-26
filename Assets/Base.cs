@@ -44,7 +44,7 @@ public class Base : MonoBehaviour
             {
                 q.material.color = this.GetComponent<Renderer>().material.color;
             }
-            tiberium -= 7;
+            tiberium -= 10;
         }
         else
         {
