@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5524477041282564758}
   - component: {fileID: 1000999624810820116}
   - component: {fileID: 9173404266720407654}
+  - component: {fileID: 9213268994022355112}
+  - component: {fileID: 4236106138681160842}
   - component: {fileID: 5524477041282564749}
   - component: {fileID: 979355194684588524}
   m_Layer: 9
@@ -72,6 +74,37 @@ MonoBehaviour:
   boid: {fileID: 0}
   targetGameObject: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
+--- !u!114 &9213268994022355112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524477041282564756}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8946ea69547d1a14b9e905a8fdc415b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  targetGameObject: {fileID: 0}
+--- !u!114 &4236106138681160842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524477041282564756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8958726e8503ee41808a21816194145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 5
 --- !u!96 &5524477041282564749
 TrailRenderer:
   serializedVersion: 2
@@ -194,6 +227,9 @@ MonoBehaviour:
   - {fileID: 2249266782745767713, guid: 19188142419f5ad42b69da4388c9770a, type: 3}
   - {fileID: 354472690150862727, guid: b7820edd81eded64ea8b4eaa92937375, type: 3}
   tiberium: 7
+  target: {x: 0, y: 0, z: 0}
+  bulletPrefab: {fileID: 7390136343811685161, guid: ae30e55a6b7c9df4e827f669f7fa6235,
+    type: 3}
 --- !u!1 &8813897858953667768
 GameObject:
   m_ObjectHideFlags: 0

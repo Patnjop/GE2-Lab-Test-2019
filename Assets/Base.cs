@@ -33,6 +33,15 @@ public class Base : MonoBehaviour
         text.text = "" + tiberium;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "bullet")
+        {
+            tiberium -= 0.5f;
+            Destroy(other.gameObject);
+        }
+    }
+
     IEnumerator tiberiumTimer()
     {
         yield return new WaitForSeconds(1f);
@@ -40,6 +49,7 @@ public class Base : MonoBehaviour
         {
             GameObject fighter = GameObject.Instantiate(fighterPrefab, this.transform.position, Quaternion.identity);
             fighter.transform.SetParent(this.transform);
+            fighter.GetComponent<FighterController>().spawnpoint = this.gameObject;
             foreach (Renderer q in GetComponentsInChildren<Renderer>())
             {
                 q.material.color = this.GetComponent<Renderer>().material.color;
